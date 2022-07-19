@@ -61,10 +61,15 @@
 
 <main class="content">
     <div class="container mt-5">
-        <h1>The app UI goes here</h1>
+        <h1>Rewind</h1>
+        <p>Description: Reverse a string with Javascript</p>
         <input type="text" id="message" placeholder="Enter a Message"/>
         <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+        <div id="results">
+            <!---------results go here---------->
+        </div>
     </div>
+
 </main>
 
      <!--FOOTER SECTION-->
@@ -101,6 +106,6 @@
     <script src="js/site.js"></script>
 
     <script>
-        document.getElementById("btnSubmit").addEventListener("click",getValue2)
+        document.getElementById("btnSubmit").addEventListener("click",getValue)
     </script>
 </body>
