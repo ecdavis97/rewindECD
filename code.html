@@ -68,15 +68,10 @@
               <a class="nav-link" href="app.html">The App</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="code.html"
-                >The Code</a
-              >
+              <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">The Repo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="https://github.com/ecdavis97/rewindECD">My Github</a>
             </li>
           </ul>
         </div>
@@ -89,32 +84,42 @@
           <div class="col-12 col-lg-8">
             <pre class="line-numbers">
                     <code class="language-javascript">
-                        function getValue(){
-                            alert("Hello World!")
+                      function getValue(){
+                        message = document.getElementById("message").value;
+                        let revMessage = reverse(message);
+                        displayReversed(revMessage);
+                    }
+                    
+                    
+                    function reverse(message){
+                        let reversedMessage = "";
+
+                        for (let index = message.length-1; index >=0; index--) {
+                            
+                            reversedMessage += message[index];
                         }
-                        
-                        function getValue2(){
-                            let msg='';
-                        
-                            msg=document.getElementById("message").value;
-                        
-                            Swal.fire(
-                                {
-                                    backdrop: false,
-                                    title: 'App Name',
-                                    text: msg
-                                }
-                            );
-                        }
+                    
+                        return reversedMessage;
+                    
+                    }
+                    
+                    function displayReversed(revMessage){
+                        let results = document.getElementById("results");
+                        results.classList.add("revMessage");
+                        results.innerHTML = revMessage;
+                    }
                     </code>
                 </pre>
           </div>
           <div class="col-12 col-lg-4">
-            <p class="fw-bold">The code is structure in two functions</p>
-            <h5>getValue</h5>
-            <p>Prints an alert to the page</p>
-            <h5>getValue2</h5>
-            <p>Displays a user-entered message in a sweet alerts menu</p>
+            <p class="fw-bold">The code is structured in a few functions:</p>
+            <h5>getValue()</h5>
+            <p>Gets the user input from the page.</p>
+            <h5>reverse()</h5>
+            <p>Takes the original string of characters and reverses it with a for loop.</p>
+            <h5>displayReversed()</h5>
+            <p>Displays the newly reversed string to the page</p>
+
           </div>
         </div>
       </div>
@@ -123,36 +128,24 @@
     <!--FOOTER SECTION-->
     <footer class="footer">
       <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-lg-3 gy-2">
-          <div
-            class="col order-last order-md-first d-flex justify-content-center justify-content-lg-start"
-          >
-            <span class="muted"
-              >&copy; 2022 Ethan Davis | ethancdavis97@gmail.com</span
-            >
-          </div>
-          <div class="col text-center">
-            <div>
-              <img src="/img/ethanDavis_colorLogo_Edited.svg" height="75" />
-              <!--make a version of logo without the second line-->
-            </div>
-          </div>
-          <div class="col d-flex justify-content-center justify-content-lg-end">
-            <div class="row">
-              <div class="col social">
-                <a href="#"><i class="bi bi-linkedin"></i></a>
+          <div class="row row-cols-1 row-cols-lg-3 gy-2">
+              <div class="col order-last order-md-first d-flex justify-content-center justify-content-lg-start">
+                  <span class="muted">&copy; 2022 Ethan Davis | ethancdavis97@gmail.com</span>
               </div>
-              <div class="col social">
-                <a href="#"><i class="bi bi-twitter"></i></a>
+              <div class="col text-center">
+                  <div>
+                      <img src="/img/ethanDavis_colorLogo_Edited.svg" height="75"> <!--make a version of logo without the second line-->
+                  </div>
               </div>
-              <div class="col social">
-                <a href="#"><i class="bi bi-github"></i></a>
+              <div class="col d-flex justify-content-center justify-content-lg-end">
+                  <div class="row">
+                      <div class="col social"><a href="https://www.linkedin.com/in/ethan-davis-2a49bb103/"><i class="bi bi-linkedin"></i></a></div>
+                      <div class="col social"><a href="https://github.com/ecdavis97"><i class="bi bi-github"></i></a></div>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </footer>
+  </footer>
 
     <!-- Bootstrap JS -->
     <script
